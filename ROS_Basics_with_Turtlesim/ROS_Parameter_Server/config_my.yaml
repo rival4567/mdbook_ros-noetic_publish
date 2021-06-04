@@ -1,0 +1,8 @@
+# Comment: config_my.yaml configuration
+details:
+        name:
+                first: "Heisenberg" # First Name
+                last: "White" # Last Name
+        contact:
+                address: "ABQ Street, ABQ" # Address
+                phone: 77777    # Contact
