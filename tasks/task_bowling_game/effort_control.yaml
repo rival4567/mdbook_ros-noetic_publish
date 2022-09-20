@@ -1,0 +1,24 @@
+bowling_game:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: "joint_state_controller/JointStateController"
+    publish_rate: 50
+
+  # Position Controllers ---------------------------------------
+  x_effort_joint_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: rotate_x
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  y_effort_joint_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: rotate_y
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  z_effort_joint_controller:
+    type: "effort_controllers/JointEffortController"
+    joint: rotate_z
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+  

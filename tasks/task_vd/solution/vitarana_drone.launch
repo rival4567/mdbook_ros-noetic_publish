@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+	<arg name="static" default=""/>
+    <arg name="record" default="false"/>
+    <arg name="duration" default="120"/>
+    <arg name="rec_name" default="record.bag"/>
+
+    <group if="$(arg record)">
+        <node name="rosbag_record_drone" pkg="rosbag" type="record" args="record -O $(find vitarana_drone)/bagfiles/$(arg rec_name) --duration=$(arg duration) --chunksize=10 /edrone/gps" output="screen" />
+    </group>
+
+    <include 
+        file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name"  value="$(find vitarana_drone)/worlds/sector$(arg static).world"/>
+    </include>
+    <node name="throttler_model_states" type="throttle" pkg="topic_tools" args="messages /gazebo/model_states 3"/>
+    <node name="throttler_gps" type="throttle" pkg="topic_tools" args="messages /edrone/gps 3"/>
+    <node name="position_controller" type="position_controller.py" pkg="vitarana_drone"/>
+    <node name="attitude_controller" type="attitude_controller.py" pkg="vitarana_drone"/>
+</launch>

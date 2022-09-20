@@ -1,0 +1,512 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Solution - ROS-Noetic-Tutorials</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../learn.html"><strong aria-hidden="true">1.</strong> Learn</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/main.html"><strong aria-hidden="true">1.1.</strong> ROS Basics with Turtlesim</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Workspace/main.html"><strong aria-hidden="true">1.1.1.</strong> ROS Workspace</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Workspace/create_a_catkin_workspace.html"><strong aria-hidden="true">1.1.1.1.</strong> Create a Catkin Workspace</a></li></ol></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Package/main.html"><strong aria-hidden="true">1.1.2.</strong> ROS Package</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Package/create_a_ros_package.html"><strong aria-hidden="true">1.1.2.1.</strong> Create a ROS Package</a></li></ol></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Nodes/main.html"><strong aria-hidden="true">1.1.3.</strong> ROS Nodes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Nodes/create_a_ros_node.html"><strong aria-hidden="true">1.1.3.1.</strong> Create a ROS Node</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Nodes/command_rosrun.html"><strong aria-hidden="true">1.1.3.2.</strong> Command: rosrun</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Nodes/command_rosnode.html"><strong aria-hidden="true">1.1.3.3.</strong> Command: rosnode</a></li></ol></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Master/main.html"><strong aria-hidden="true">1.1.4.</strong> ROS Master</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Parameter_Server/main.html"><strong aria-hidden="true">1.1.5.</strong> ROS Parameter Server</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Parameter_Server/load_parameters_using_yaml_file.html"><strong aria-hidden="true">1.1.5.1.</strong> Load Parameters using YAML file</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Parameter_Server/ros_node_to_get_and_set_parameters.html"><strong aria-hidden="true">1.1.5.2.</strong> Example #1: ROS Node to Get and Set Parameters</a></li></ol></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Launch_Files/main.html"><strong aria-hidden="true">1.1.6.</strong> ROS Launch Files</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Launch_Files/create_a_ros_launch_file.html"><strong aria-hidden="true">1.1.6.1.</strong> Create a ROS Launch File</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Launch_Files/launch_two_ros_nodes.html"><strong aria-hidden="true">1.1.6.2.</strong> Example #1: Launch two ROS Nodes</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Launch_Files/launch_turtle_in_forest.html"><strong aria-hidden="true">1.1.6.3.</strong> Example #2: Launch Turtle in Forest</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Launch_Files/load_yaml.html"><strong aria-hidden="true">1.1.6.4.</strong> Example #3: Load YAML</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Launch_Files/launch_shell_script_and_ros_node.html"><strong aria-hidden="true">1.1.6.5.</strong> Example #4: Launch Shell Script and ROS Node</a></li></ol></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/main.html"><strong aria-hidden="true">1.1.7.</strong> ROS Communication</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Topics/main.html"><strong aria-hidden="true">1.1.7.1.</strong> ROS Topics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Topics/command_rostopic/main.html"><strong aria-hidden="true">1.1.7.1.1.</strong> Command: rostopic</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Topics/command_rostopic/list.html"><strong aria-hidden="true">1.1.7.1.1.1.</strong> list</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Topics/command_rostopic/type_info_and_rosmsg.html"><strong aria-hidden="true">1.1.7.1.1.2.</strong> type, info and rosmsg</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Topics/command_rostopic/pub.html"><strong aria-hidden="true">1.1.7.1.1.3.</strong> pub</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Topics/command_rostopic/echo.html"><strong aria-hidden="true">1.1.7.1.1.4.</strong> echo</a></li></ol></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Topics/pub_sub_with_custom_message.html"><strong aria-hidden="true">1.1.7.1.2.</strong> Example #1: Pub-Sub with Custom Message</a></li></ol></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Services/main.html"><strong aria-hidden="true">1.1.7.2.</strong> ROS Services</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Services/create_a_srv_file.html"><strong aria-hidden="true">1.1.7.2.1.</strong> Create a srv file</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Services/test_ros_services_server_and_client.html"><strong aria-hidden="true">1.1.7.2.2.</strong> Test ROS Services - Server and Client</a></li></ol></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Actions/main.html"><strong aria-hidden="true">1.1.7.3.</strong> ROS Actions</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Actions/create_a_action_message_file.html"><strong aria-hidden="true">1.1.7.3.1.</strong> Create an action message file</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Actions/simple_action_server_and_client.html"><strong aria-hidden="true">1.1.7.3.2.</strong> Simple Action Server & Client</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Actions/action_server_and_client.html"><strong aria-hidden="true">1.1.7.3.3.</strong> Action Server & Client</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_Communication/ROS_Actions/ros_actions_walkthrough_videos.html"><strong aria-hidden="true">1.1.7.3.4.</strong> ROS Actions Walkthrough Videos</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_TF/main.html"><strong aria-hidden="true">1.1.8.</strong> ROS TF</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/ROS_TF/ros_tf_using_turtlesim.html"><strong aria-hidden="true">1.1.8.1.</strong> ROS tf using turtlesim</a></li></ol></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/Miscellaneous/main.html"><strong aria-hidden="true">1.1.9.</strong> Miscellaneous</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/Miscellaneous/rqt_graph.html"><strong aria-hidden="true">1.1.9.1.</strong> Rqt_graph</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/Miscellaneous/plot_juggler.html"><strong aria-hidden="true">1.1.9.2.</strong> Plot juggler</a></li><li class="chapter-item "><a href="../../ROS_Basics_with_Turtlesim/Miscellaneous/ros_bags.html"><strong aria-hidden="true">1.1.9.3.</strong> ROS Bags</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../Additional_Sections/main.html"><strong aria-hidden="true">1.2.</strong> Additional Sections</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Additional_Sections/configuring_your_ros_environment.html"><strong aria-hidden="true">1.2.1.</strong> Configuring your ROS environment</a></li><li class="chapter-item "><a href="../../Additional_Sections/introducing_turtlesim_and_rqt.html"><strong aria-hidden="true">1.2.2.</strong> Introducing turtlesim and rqt</a></li><li class="chapter-item "><a href="../../Additional_Sections/ros_nodes.html"><strong aria-hidden="true">1.2.3.</strong> Understanding ROS nodes</a></li><li class="chapter-item "><a href="../../Additional_Sections/ros_topics.html"><strong aria-hidden="true">1.2.4.</strong> Understanding ROS topics</a></li><li class="chapter-item "><a href="../../Additional_Sections/ros_services.html"><strong aria-hidden="true">1.2.5.</strong> Understanding ROS services</a></li></ol></li><li class="chapter-item "><a href="../../ROS_with_Gazebo/main.html"><strong aria-hidden="true">1.3.</strong> ROS with Gazebo</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_with_Gazebo/installation.html"><strong aria-hidden="true">1.3.1.</strong> Installation Guide</a></li><li class="chapter-item "><a href="../../ROS_with_Gazebo/Gazebo_Simulator/main.html"><strong aria-hidden="true">1.3.2.</strong> Gazebo Simulator</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_with_Gazebo/Gazebo_Simulator/knocking_one_pin.html"><strong aria-hidden="true">1.3.2.1.</strong> Example: Knock down the bowling pin</a></li></ol></li><li class="chapter-item "><a href="../../ROS_with_Gazebo/rviz.html"><strong aria-hidden="true">1.3.3.</strong> RViz</a></li><li class="chapter-item "><a href="../../ROS_with_Gazebo/URDF/main.html"><strong aria-hidden="true">1.3.4.</strong> URDF</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_with_Gazebo/URDF/visual_robot_model_with_urdf.html"><strong aria-hidden="true">1.3.4.1.</strong> Visual Robot Model with URDF</a></li><li class="chapter-item "><a href="../../ROS_with_Gazebo/URDF/defining_joints_in_urdf.html"><strong aria-hidden="true">1.3.4.2.</strong> Defining Movable Joints in URDF</a></li><li class="chapter-item "><a href="../../ROS_with_Gazebo/URDF/physical_and_collision_properties_in_urdf_model.html"><strong aria-hidden="true">1.3.4.3.</strong> Adding Physical and Collision Properties to a URDF Model</a></li><li class="chapter-item "><a href="../../ROS_with_Gazebo/URDF/urdf_vs_sdf.html"><strong aria-hidden="true">1.3.4.4.</strong> Difference between URDF and SDF</a></li></ol></li><li class="chapter-item "><a href="../../ROS_with_Gazebo/XACRO/main.html"><strong aria-hidden="true">1.3.5.</strong> XACRO</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_with_Gazebo/XACRO/using_xacro_in_a_urdf_file.html"><strong aria-hidden="true">1.3.5.1.</strong> Using Xacro to Clean Up a URDF File</a></li></ol></li><li class="chapter-item "><a href="../../ROS_with_Gazebo/Gazebo_Plugins/main.html"><strong aria-hidden="true">1.3.6.</strong> Gazebo Plugins</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../ROS_with_Gazebo/Gazebo_Plugins/using_urdf_in_gazebo.html"><strong aria-hidden="true">1.3.6.1.</strong> Using URDF in Gazebo</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../Micromouse/main.html"><strong aria-hidden="true">1.4.</strong> Micromouse</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Micromouse/installation.html"><strong aria-hidden="true">1.4.1.</strong> Installation</a></li><li class="chapter-item "><a href="../../Micromouse/creating_your_own_micromouse.html"><strong aria-hidden="true">1.4.2.</strong> Creating your robot</a></li><li class="chapter-item "><a href="../../Micromouse/Example_Codes/main.html"><strong aria-hidden="true">1.4.3.</strong> Example Codes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Micromouse/Example_Codes/reading_laser_scan.html"><strong aria-hidden="true">1.4.3.1.</strong> Reading Laser Scan</a></li><li class="chapter-item "><a href="../../Micromouse/Example_Codes/use_diff_drive_to_move_micromouse.html"><strong aria-hidden="true">1.4.3.2.</strong> Differential Drive to move Micromouse</a></li><li class="chapter-item "><a href="../../Micromouse/Example_Codes/use_velocity_controllers_to_move_micromouse.html"><strong aria-hidden="true">1.4.3.3.</strong> Velocity Controller to move Micromouse</a></li><li class="chapter-item "><a href="../../Micromouse/Example_Codes/go_to_point.html"><strong aria-hidden="true">1.4.3.4.</strong> Go to point</a></li><li class="chapter-item "><a href="../../Micromouse/Example_Codes/maze_runner.html"><strong aria-hidden="true">1.4.3.5.</strong> Maze Runner</a></li><li class="chapter-item "><a href="../../Micromouse/Example_Codes/obstacle_avoidance.html"><strong aria-hidden="true">1.4.3.6.</strong> Obstacle Avoidance</a></li><li class="chapter-item "><a href="../../Micromouse/Example_Codes/follow_wall.html"><strong aria-hidden="true">1.4.3.7.</strong> Follow Wall</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../tasks/main.html"><strong aria-hidden="true">2.</strong> Tasks</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tasks/task0/main.html"><strong aria-hidden="true">2.1.</strong> Task0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tasks/task0/turtle-task.html"><strong aria-hidden="true">2.1.1.</strong> Problem Statement</a></li><li class="chapter-item "><a href="../../tasks/task0/expected-output.html"><strong aria-hidden="true">2.1.2.</strong> Expected Output</a></li><li class="chapter-item "><a href="../../tasks/task0/recording-logs.html"><strong aria-hidden="true">2.1.3.</strong> Recording Logs</a></li><li class="chapter-item "><a href="../../tasks/task0/solution.html"><strong aria-hidden="true">2.1.4.</strong> Solution</a></li><li class="chapter-item "><a href="../../tasks/task0/autoeval.html"><strong aria-hidden="true">2.1.5.</strong> Autoeval script</a></li></ol></li><li class="chapter-item "><a href="../../tasks/task_2/main.html"><strong aria-hidden="true">2.2.</strong> Task2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tasks/task_2/problem_statement.html"><strong aria-hidden="true">2.2.1.</strong> Problem Statement</a></li><li class="chapter-item "><a href="../../tasks/task_2/expected_output.html"><strong aria-hidden="true">2.2.2.</strong> Expected Output</a></li><li class="chapter-item "><a href="../../tasks/task_2/recording-logs.html"><strong aria-hidden="true">2.2.3.</strong> Recording Logs</a></li><li class="chapter-item "><a href="../../tasks/task_2/solution.html"><strong aria-hidden="true">2.2.4.</strong> Solution</a></li><li class="chapter-item "><a href="../../tasks/task_2/autoeval_script.html"><strong aria-hidden="true">2.2.5.</strong> Autoeval script</a></li></ol></li><li class="chapter-item "><a href="../../tasks/task_bowling_game/main.html"><strong aria-hidden="true">2.3.</strong> Bowling Game</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tasks/task_bowling_game/problem_statement.html"><strong aria-hidden="true">2.3.1.</strong> Problem Statement</a></li><li class="chapter-item "><a href="../../tasks/task_bowling_game/expected_output.html"><strong aria-hidden="true">2.3.2.</strong> Expected Output</a></li><li class="chapter-item "><a href="../../tasks/task_bowling_game/recording_logs.html"><strong aria-hidden="true">2.3.3.</strong> Recording Logs</a></li><li class="chapter-item "><a href="../../tasks/task_bowling_game/solution.html"><strong aria-hidden="true">2.3.4.</strong> Solution</a></li><li class="chapter-item "><a href="../../tasks/task_bowling_game/autoeval.html"><strong aria-hidden="true">2.3.5.</strong> Autoeval script</a></li></ol></li><li class="chapter-item "><a href="../../tasks/task_micromouse/main.html"><strong aria-hidden="true">2.4.</strong> Micromouse</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tasks/task_micromouse/problem_statement.html"><strong aria-hidden="true">2.4.1.</strong> Problem Statement</a></li><li class="chapter-item "><a href="../../tasks/task_micromouse/expected_output.html"><strong aria-hidden="true">2.4.2.</strong> Expected Output</a></li><li class="chapter-item "><a href="../../tasks/task_micromouse/recording_logs.html"><strong aria-hidden="true">2.4.3.</strong> Recording Logs</a></li><li class="chapter-item "><a href="../../tasks/task_micromouse/NOT_FOR_SHARING/main.html"><strong aria-hidden="true">2.4.4.</strong> NOT FOR SHARING</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tasks/task_micromouse/NOT_FOR_SHARING/solution.html"><strong aria-hidden="true">2.4.4.1.</strong> Solution</a></li><li class="chapter-item "><a href="../../tasks/task_micromouse/NOT_FOR_SHARING/autoeval.html"><strong aria-hidden="true">2.4.4.2.</strong> Autoeval script</a></li><li class="chapter-item "><a href="../../tasks/task_micromouse/NOT_FOR_SHARING/add_more_mazes.html"><strong aria-hidden="true">2.4.4.3.</strong> Add more maze</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../tasks/task_simbhabot/main.html"><strong aria-hidden="true">2.5.</strong> Simbhabot</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tasks/task_simbhabot/installation.html"><strong aria-hidden="true">2.5.1.</strong> Installation</a></li><li class="chapter-item "><a href="../../tasks/task_simbhabot/problem_statement.html"><strong aria-hidden="true">2.5.2.</strong> Problem Statement</a></li><li class="chapter-item "><a href="../../tasks/task_simbhabot/expected_output.html"><strong aria-hidden="true">2.5.3.</strong> Expected Output</a></li><li class="chapter-item "><a href="../../tasks/task_simbhabot/recording_logs.html"><strong aria-hidden="true">2.5.4.</strong> Recording Logs</a></li><li class="chapter-item expanded "><a href="../../tasks/task_simbhabot/solution.html" class="active"><strong aria-hidden="true">2.5.5.</strong> Solution</a></li><li class="chapter-item "><a href="../../tasks/task_simbhabot/autoeval.html"><strong aria-hidden="true">2.5.6.</strong> Autoeval Script</a></li></ol></li><li class="chapter-item "><a href="../../tasks/task_line_follower/main.html"><strong aria-hidden="true">2.6.</strong> Line-follower Robot</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tasks/task_line_follower/problem_statement.html"><strong aria-hidden="true">2.6.1.</strong> Problem Statement</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tasks/task_line_follower/create_robot.html"><strong aria-hidden="true">2.6.1.1.</strong> Create Robot Model</a></li><li class="chapter-item "><a href="../../tasks/task_line_follower/create_script.html"><strong aria-hidden="true">2.6.1.2.</strong> Create The Script</a></li></ol></li><li class="chapter-item "><a href="../../tasks/task_line_follower/expected_output.html"><strong aria-hidden="true">2.6.2.</strong> Expected Output</a></li><li class="chapter-item "><a href="../../tasks/task_line_follower/recording-logs.html"><strong aria-hidden="true">2.6.3.</strong> Recording Logs</a></li><li class="chapter-item "><a href="../../tasks/task_line_follower/solution.html"><strong aria-hidden="true">2.6.4.</strong> Solution</a></li><li class="chapter-item "><a href="../../tasks/task_line_follower/autoeval.html"><strong aria-hidden="true">2.6.5.</strong> Autoeval script</a></li></ol></li><li class="chapter-item "><a href="../../tasks/task_vd/main.html"><strong aria-hidden="true">2.7.</strong> Vitrana Drone</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tasks/task_vd/installation.html"><strong aria-hidden="true">2.7.1.</strong> installation</a></li><li class="chapter-item "><a href="../../tasks/task_vd/learn.html"><strong aria-hidden="true">2.7.2.</strong> learing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tasks/task_vd/learn_edrone_model.html"><strong aria-hidden="true">2.7.2.1.</strong> Exploring eDrone ROS-Gazebo model</a></li><li class="chapter-item "><a href="../../tasks/task_vd/path_planning.html"><strong aria-hidden="true">2.7.2.2.</strong> Path planning and navigation</a></li></ol></li><li class="chapter-item "><a href="../../tasks/task_vd/problem_statement.html"><strong aria-hidden="true">2.7.3.</strong> Problem Statement</a></li><li class="chapter-item "><a href="../../tasks/task_vd/expected_output.html"><strong aria-hidden="true">2.7.4.</strong> Expected Output</a></li><li class="chapter-item "><a href="../../tasks/task_vd/recording-logs.html"><strong aria-hidden="true">2.7.5.</strong> Recording Logs</a></li><li class="chapter-item "><a href="../../tasks/task_vd/solution.html"><strong aria-hidden="true">2.7.6.</strong> Solution</a></li><li class="chapter-item "><a href="../../tasks/task_vd/autoeval.html"><strong aria-hidden="true">2.7.7.</strong> Autoeval script</a></li></ol></li><li class="chapter-item "><a href="../../tasks/task_ur5_multiple_arm/main.html"><strong aria-hidden="true">2.8.</strong> UR5 Multiple Arm</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tasks/task_ur5_multiple_arm/installation.html"><strong aria-hidden="true">2.8.1.</strong> Installation</a></li><li class="chapter-item "><a href="../../tasks/task_ur5_multiple_arm/problem_statement.html"><strong aria-hidden="true">2.8.2.</strong> Problem Statement</a></li><li class="chapter-item "><a href="../../tasks/task_ur5_multiple_arm/expected_output.html"><strong aria-hidden="true">2.8.3.</strong> Expected Output</a></li><li class="chapter-item "><a href="../../tasks/task_ur5_multiple_arm/recording_logs.html"><strong aria-hidden="true">2.8.4.</strong> Recording Logs</a></li><li class="chapter-item "><a href="../../tasks/task_ur5_multiple_arm/solution.html"><strong aria-hidden="true">2.8.5.</strong> Solution</a></li><li class="chapter-item "><a href="../../tasks/task_ur5_multiple_arm/autoeval.html"><strong aria-hidden="true">2.8.6.</strong> Autoeval script</a></li></ol></li><li class="chapter-item "><a href="../../tasks/task_sahayak_bot/main.html"><strong aria-hidden="true">2.9.</strong> Sahayak Bot</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tasks/task_sahayak_bot/installation.html"><strong aria-hidden="true">2.9.1.</strong> Installation</a></li><li class="chapter-item "><a href="../../tasks/task_sahayak_bot/output.html"><strong aria-hidden="true">2.9.2.</strong> Output</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ROS-Noetic-Tutorials</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="solution"><a class="header" href="#solution">Solution</a></h1>
+<p>Solution package can be downloaded from here =&gt; <a href="pkg_simbha_bot.zip" download><button>Download</button></a></p>
+<br/>
+<h2 id="to-run-the-solution"><a class="header" href="#to-run-the-solution">To run the solution</a></h2>
+<p>Launch this file <code>simbha_solution.launch</code>. This will spawn the simbhabot in gazebo environment and also run node <code>bug0_algorithm.py</code>.</p>
+<pre><code class="language-bash">roslaunch pkg_simbha_bot simbha_solution.launch
+</code></pre>
+<p><code>bug0_algorithm.py</code></p>
+<p>This script go to the destination position i.e. <strong>(7.0, 0.0)</strong> using bug0 algorithm.</p>
+<pre><code class="language-python">#!/usr/bin/env python3
+
+import rospy
+
+from nav_msgs.msg import Odometry
+from geometry_msgs.msg import Twist, Point
+from sensor_msgs.msg import LaserScan
+from tf import transformations
+import random_spawn
+
+import math
+
+MX_RANGE = 10
+
+FINAL_TARGET = Point()
+FINAL_TARGET.x = 7.0
+FINAL_TARGET.y = 0.0
+
+YAW_PRECISION = 5 * (math.pi / 180)  # 5 degrees
+DIST_PRECISION = 0.10
+
+
+class ObstacleAvoider(object):
+
+    def __init__(self):
+
+        self.regions = {
+            'right': 0.0,
+            'fright': 0.0,
+            'front': 0.0,
+            'fleft': 0.0,
+            'left': 0.0
+        }
+
+        self.velocity_msg = Twist()
+        self.move_state = 0
+        self.obstacle_avoidance_state = 0
+        self.robot_state = 0
+        self.reached_destination = False
+
+        self.pose = [0.0, 0.0, 0.0]
+        self.curr_position = Point()
+
+        self.publisher_ = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
+        self.subscription = rospy.Subscriber(
+            '/odom', Odometry, self.odom_callback)
+
+        self.subscription = rospy.Subscriber(
+            '/scan', LaserScan, self.laserscan_callback)
+
+        self.rate = rospy.Rate(20)
+
+    # angle difference or yaw between any point and the bot.
+    def error_angle(self, point):
+        rx = self.pose[0]
+        ry = self.pose[1]
+        theta = self.pose[2]*(math.pi/180)
+        theta_goal = math.atan2(point.y - ry, point.x - rx)
+        error = self.normalize_angle(theta_goal - theta)
+        return error
+
+    # function that gives linear distance between any point and the bot.
+    def calc_dist_points(self, point1, point2):
+        dist = math.sqrt((point1.y - point2.y)**2 + (point1.x - point2.x)**2)
+        return dist
+
+    # function to limit the bot rotation between -pi to pi
+    def normalize_angle(self, angle):
+        if(math.fabs(angle) &gt; math.pi):
+            angle = angle - (2 * math.pi * angle) / (math.fabs(angle))
+        return angle
+
+    def fix_yaw(self, des_pos):
+        err_yaw = self.error_angle(des_pos)
+
+        if math.fabs(err_yaw) &gt; YAW_PRECISION:
+            if err_yaw &gt; 0:
+                self.velocity_msg.linear.x = 0.0
+                self.velocity_msg.angular.z = 0.5
+            else:
+                self.velocity_msg.linear.x = 0.0
+                self.velocity_msg.angular.z = -0.5
+
+        if math.fabs(err_yaw) &lt; YAW_PRECISION:
+            self.move_state = 1
+
+        self.publisher_.publish(self.velocity_msg)
+
+    def go_straight_ahead(self, des_pos):
+        err_yaw = self.error_angle(des_pos)
+        curr_pos = Point()
+        curr_pos.x = self.pose[0]
+        curr_pos.y = self.pose[1]
+        err_pos = self.calc_dist_points(des_pos, curr_pos)
+
+        if err_pos &gt; DIST_PRECISION:
+
+            self.velocity_msg.linear.x = 0.55
+            self.velocity_msg.angular.z = 0.0 if err_yaw &gt; YAW_PRECISION else -0.0
+            self.publisher_.publish(self.velocity_msg)
+        else:
+            self.done()
+
+        # state change conditions
+        if math.fabs(err_yaw) &gt; YAW_PRECISION:
+            self.move_state = 0
+
+    def done(self):
+        self.velocity_msg.linear.x = 0.0
+        self.velocity_msg.angular.z = 0.0
+        self.publisher_.publish(self.velocity_msg)
+        self.reached_destination = True
+
+    def quaternion_to_euler(self, x, y, z, w):
+
+        t0 = +2.0 * (w * x + y * z)
+        t1 = +1.0 - 2.0 * (x * x + y * y)
+        X = math.degrees(math.atan2(t0, t1))
+
+        t2 = +2.0 * (w * y - z * x)
+        t2 = +1.0 if t2 &gt; +1.0 else t2
+        t2 = -1.0 if t2 &lt; -1.0 else t2
+        Y = math.degrees(math.asin(t2))
+
+        t3 = +2.0 * (w * z + x * y)
+        t4 = +1.0 - 2.0 * (y * y + z * z)
+        Z = math.degrees(math.atan2(t3, t4))
+
+        return [X, Y, Z]
+
+    def euler_to_quaternion(self, r):
+        (yaw, pitch, roll) = (r[0], r[1], r[2])
+        qx = math.sin(roll/2) * math.cos(pitch/2) * math.cos(yaw/2) - \
+            math.cos(roll/2) * math.sin(pitch/2) * math.sin(yaw/2)
+        qy = math.cos(roll/2) * math.sin(pitch/2) * math.cos(yaw/2) + \
+            math.sin(roll/2) * math.cos(pitch/2) * math.sin(yaw/2)
+        qz = math.cos(roll/2) * math.cos(pitch/2) * math.sin(yaw/2) - \
+            math.sin(roll/2) * math.sin(pitch/2) * math.cos(yaw/2)
+        qw = math.cos(roll/2) * math.cos(pitch/2) * math.cos(yaw/2) + \
+            math.sin(roll/2) * math.sin(pitch/2) * math.sin(yaw/2)
+        return [qx, qy, qz, qw]
+
+    def odom_callback(self, data):
+        x = data.pose.pose.orientation.x
+        y = data.pose.pose.orientation.y
+        z = data.pose.pose.orientation.z
+        w = data.pose.pose.orientation.w
+        self.curr_position = data.pose.pose.position
+        self.pose = [data.pose.pose.position.x,
+                     data.pose.pose.position.y,
+                     self.quaternion_to_euler(x, y, z, w)[2]]
+
+    def reach_goal(self):
+
+        if self.regions['front'] &gt; 0.50 and self.regions['front'] &lt; 1:
+            self.robot_state = 1
+
+        if self.robot_state == 0:
+            if self.move_state == 0:
+                self.fix_yaw(FINAL_TARGET)
+                rospy.loginfo('Fixing Heading to reach Target')
+            elif self.move_state == 1:
+                self.go_straight_ahead(FINAL_TARGET)
+                rospy.loginfo('Moving towards the Target')
+
+        if self.robot_state == 1:
+            err_yaw = self.error_angle(FINAL_TARGET)
+            if math.fabs(err_yaw) &lt; (math.pi / 6) and \
+                    self.regions['front'] &gt; 1.5 and self.regions['fright'] &gt; 1 and self.regions['fleft'] &gt; 1:
+                # print ('less than 30')
+                self.robot_state = 0
+
+            # between 30 and 90
+            if err_yaw &gt; 0 and \
+                    math.fabs(err_yaw) &gt; (math.pi / 6) and \
+                    math.fabs(err_yaw) &lt; (math.pi / 2) and \
+                    self.regions['left'] &gt; 1.5 and self.regions['fleft'] &gt; 1:
+                # print ('between 30 and 90 - to the left')
+                self.robot_state = 0
+
+            if err_yaw &lt; 0 and \
+                    math.fabs(err_yaw) &gt; (math.pi / 6) and \
+                    math.fabs(err_yaw) &lt; (math.pi / 2) and \
+                    self.regions['right'] &gt; 1.5 and self.regions['fright'] &gt; 1:
+                # print ('between 30 and 90 - to the right')
+                self.robot_state = 0
+
+            self.follow_wall()
+
+    def laserscan_callback(self, msg):
+        self.regions = {
+            'right': min(min(msg.ranges[0:127]), MX_RANGE),
+            'fright': min(min(msg.ranges[128:255]), MX_RANGE),
+            'front': min(min(msg.ranges[256:383]), MX_RANGE),
+            'fleft': min(min(msg.ranges[384:511]), MX_RANGE),
+            'left': min(min(msg.ranges[512:640]), MX_RANGE),
+        }
+        self.take_action(self.regions)
+
+    def find_wall(self):
+
+        self.velocity_msg.linear.x = 0.55
+        self.velocity_msg.angular.z = -0.25
+        self.publisher_.publish(self.velocity_msg)
+
+    def turn_left(self):
+        self.velocity_msg.linear.x = 0.0
+        self.velocity_msg.angular.z = 0.55
+        self.publisher_.publish(self.velocity_msg)
+
+    def follow_the_wall(self):
+
+        self.velocity_msg.linear.x = 0.35
+        self.velocity_msg.angular.z = 0.0
+        self.publisher_.publish(self.velocity_msg)
+        # rospy.loginfo('%s'%str(self.velocity_msg))
+
+    def check_sensors_for_nan(self, regions):
+        for key in regions.keys():
+            if regions[key] != regions[key]:
+                regions[key] = math.inf
+        return regions
+
+    def take_action(self, regions):
+
+        if self.robot_state == 1:
+            state_description = ''
+            d = 1.5
+            regions = self.check_sensors_for_nan(regions)
+            if regions['front'] &gt; d and regions['fleft'] &gt; d and regions['fright'] &gt; d:
+                state_description = 'case 1 - nothing'
+                self.obstacle_avoidance_state = 0
+
+            elif regions['front'] &lt; d and regions['fleft'] &gt; d and regions['fright'] &gt; d:
+                state_description = 'case 2 - front'
+                self.obstacle_avoidance_state = 1
+
+            elif regions['front'] &gt; d and regions['fleft'] &gt; d and regions['fright'] &lt; d:
+                state_description = 'case 3 - fright'
+                self.obstacle_avoidance_state = 2
+
+            elif regions['front'] &gt; d and regions['fleft'] &lt; d and regions['fright'] &gt; d:
+                state_description = 'case 4 - fleft'
+                self.obstacle_avoidance_state = 0
+
+            elif regions['front'] &lt; d and regions['fleft'] &gt; d and regions['fright'] &lt; d:
+                state_description = 'case 5 - front and fright'
+                self.obstacle_avoidance_state = 1
+
+            elif regions['front'] &lt; d and regions['fleft'] &lt; d and regions['fright'] &gt; d:
+                state_description = 'case 6 - front and fleft'
+                self.obstacle_avoidance_state = 1
+
+            elif regions['front'] &lt; d and regions['fleft'] &lt; d and regions['fright'] &lt; d:
+                state_description = 'case 7 - front and fleft and fright'
+                self.obstacle_avoidance_state = 1
+
+            elif regions['front'] &gt; d and regions['fleft'] &lt; d and regions['fright'] &lt; d:
+                state_description = 'case 8 - fleft and fright'
+                self.obstacle_avoidance_state = 0
+
+            else:
+                state_description = 'unknown case'
+                rospy.loginfo('Laser_scan_data: &quot;%s&quot;' % str(self.regions))
+
+    def follow_wall(self):
+        if self.obstacle_avoidance_state == 0:
+            rospy.loginfo('Finding nearby wall')
+            self.find_wall()
+        elif self.obstacle_avoidance_state == 1:
+            rospy.loginfo('Turning Left')
+            self.turn_left()
+        elif self.obstacle_avoidance_state == 2:
+            rospy.loginfo('Following the wall')
+            self.follow_the_wall()
+
+
+def main():
+    rospy.init_node('node_bug_algorithm')
+
+    simbha_mover = ObstacleAvoider()
+    while not rospy.is_shutdown():
+        simbha_mover.reach_goal()
+        simbha_mover.rate.sleep()
+
+
+if __name__ == '__main__':
+    main()
+
+</code></pre>
+<center><a href="bug0_algorithm.py" download><button>Download</button></a></center>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../tasks/task_simbhabot/recording_logs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../tasks/task_simbhabot/autoeval.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../tasks/task_simbhabot/recording_logs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../tasks/task_simbhabot/autoeval.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
